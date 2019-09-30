@@ -32,7 +32,7 @@ app.layout = html.Div(children=[
                     min=1,
                     max=8,
                     step=0.1,
-                    marks={i:str(i) for i in range(1, 10)},
+                    marks={i:str(i) for i in range(1, 9)},
                     value=5
                 ),
                 html.Br(),
@@ -44,7 +44,7 @@ app.layout = html.Div(children=[
                     min=0.1,
                     max=3,
                     step=0.1,
-                    marks={i:str(i) for i in range(0, 5)},
+                    marks={i:str(i) for i in range(0, 4)},
                     value=1.3,
                 ),
                 html.Br(),
@@ -90,7 +90,7 @@ def display_figure(val0, val1):
     neighbors=list(model.kneighbors(new_observation0)[1][0])
     df_neighbors=train.iloc[neighbors, :]
 
-    brights = ['deep aqua', 'ocean', 'wave', 'seafoam'] # https://www.canva.com/learn/100-color-combinations/
+    brights = ['brown', 'black', 'grey', 'orange'] # https://www.canva.com/learn/100-color-combinations/
 
     trace1 = go.Scatter(
         x = train['pl'],
